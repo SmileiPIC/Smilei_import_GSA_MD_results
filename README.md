@@ -16,6 +16,10 @@ The repository also includes postprocessing scripts to analyse the simulation re
 First, download and install the `gsa_md` Python library from ...
 Then, follow the instructions in the README files of the chosen use-case.
 
+### Contributors
+Francesco Massimo created the input namelist for the case in cylindrical geometry with azimuthal mode decomposition, Mohamad Masckala developed the related postprocessing scripts. 
+The development of the input namelist benefitted from previous work by Ioaquin Moulanier.
+
 ### Acknowledgements
 The development and benchmarking of the input namelist in cylindrical geometry in this repository
 benefitted from access to the HPC resources of CINES under the allocation 
