@@ -13,7 +13,7 @@ The namelists runs a PIC simulation that propagates the laser pulse in vacuum.
 The repository also includes postprocessing scripts to analyse the simulation results.
 
 ### How to use it
-First, download and install the `gsa_md` Python library from ...
+First, download and install the `gsa_md` Python library from [https://github.com/GSA-MD/GSA-MD](https://github.com/GSA-MD/GSA-MD)
 Then, follow the instructions in the README files of the chosen use-case.
 
 ### Contributors
