@@ -271,7 +271,11 @@ one_ov_e2_width_z_theory = np.array(one_ov_e2_width_z_theory)
 ax1.plot(x_minus_x_focus_PIC[2::]/1e-6,one_ov_e2_width_y_theory[2::]/1e-6,label="analytical propagation",c="r",linestyle = "dashed",dashes=(10,5),zorder=1)
 ax2.plot(x_minus_x_focus_PIC[2::]/1e-6,one_ov_e2_width_z_theory[2::]/1e-6,label="analytical propagation",c="r",linestyle = "dashed",dashes=(10,5),zorder=1)
 
-#ax1.legend()
+w0 = 18e-6
+X_R = w0*w0/0.8e-6*np.pi
+ax1.plot(x_minus_x_focus_PIC[2::]/1e-6,2./1e-6*w0*np.sqrt(1+np.square(x_minus_x_focus_PIC[2::])/X_R**2),c="k",linestyle="--",label="analytical propagation, Gaussian fit")
+ax2.plot(x_minus_x_focus_PIC[2::]/1e-6,2./1e-6*w0*np.sqrt(1+np.square(x_minus_x_focus_PIC[2::])/X_R**2),c="k",linestyle="--")
+ax1.legend()
 #ax2.legend()
 
 # # Save the combined figure
