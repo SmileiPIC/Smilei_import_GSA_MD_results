@@ -2,7 +2,7 @@ GNU GENERAL PUBLIC LICENSE
 Version 3, 29 June 2007
 
 Smilei_import_GSA_MD_results Copyright (C) 2025 CNRS
-Authors: Francesco Massimo, Mohamad Masckala
+Authors: Francesco Massimo, I. Moulanier, Mohamad Masckala, T. L. Steyn
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
