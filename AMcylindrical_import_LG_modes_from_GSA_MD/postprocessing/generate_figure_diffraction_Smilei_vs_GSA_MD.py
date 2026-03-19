@@ -250,7 +250,7 @@ for i_plane in range(0,np.size(x_minus_x_focus_PIC)):
                              "theta_mesh"         : theta_mesh_axis_z} 
 
     for l in range(-dict_mode_basis["Max_LG_index_l"], dict_mode_basis["Max_LG_index_l"] + 1):
-        # negative l indices are stored with the FFT convention for negative frequencies
+        # negative l indices are stored with increasing absolute value after the maximum positive index, e.g. 0,1,2,-1,-2
         l_index = l if l >= 0 else dict_mode_basis["Max_LG_index_l"] + abs(l)
         # sum the x,r part of the modes with the same l index and different radial p indices
         for p in range(0,dict_mode_basis["Max_LG_index_p"]+1):

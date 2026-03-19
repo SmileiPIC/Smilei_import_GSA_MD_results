@@ -64,7 +64,7 @@ dict_mesh_plane_xmin     = {"plane_x_coordinates":np.array([0]),"r_mesh":r_mesh_
 Ey_complex               = np.zeros(shape=(1, np.size(r_mesh_for_interpolation)),dtype=complex)
 LG_l_field_r             = np.zeros(shape=(2*dict_mode_basis["Max_LG_index_l"]+1,1,np.size(r_mesh_for_interpolation)),dtype=complex)
 for l in range(-dict_mode_basis["Max_LG_index_l"], dict_mode_basis["Max_LG_index_l"] + 1):
-    # negative l indices are stored with the FFT convention for negative frequencies
+    # negative l indices are stored after the positive frequencies, with increasing |l|
     l_index = l if l >= 0 else dict_mode_basis["Max_LG_index_l"] + abs(l)
     # sum the x,r part of the modes with the same l index and different radial p indices
     for p in range(0,dict_mode_basis["Max_LG_index_p"]+1):

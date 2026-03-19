@@ -176,7 +176,7 @@ r_mesh_dual               = r_mesh_dual/meter                       # convert to
 
 # Create arrays where the sums of LG^{pl} contributions with the same l at given r positions are stored.
 # The three indices represent the l mode index, the x coordinate index (only one since we use only one plane), and the r index on the grid.
-# The modes l are stored as in a FFT: from zero to the maximum l, then the negative l values with increasing magnitude
+# The modes l are stored from zero to the maximum l, then the negative l values with increasing |l|
 LG_l_field_r_primal       = np.zeros(shape=(2*dict_mode_basis["Max_LG_index_l"]+1,1,np.size(r_mesh_primal)),dtype=complex)
 LG_l_field_r_dual         = np.zeros(shape=(2*dict_mode_basis["Max_LG_index_l"]+1,1,np.size(r_mesh_dual  )),dtype=complex)
 

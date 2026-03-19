@@ -74,9 +74,12 @@ bin_width_E          = Energy_bin_centres[1]-Energy_bin_centres[0]
 hist                 = hist/bin_width_E
 
 # Plot energy spectrum
+linestyle = "-"
+linecolor = "r"
+linewidth = 2
 plt.ion()
 plt.figure(1)
-plt.plot(Energy_bin_centres,hist,linestyle="-",c="k")
+plt.plot(Energy_bin_centres,hist,linestyle=linestyle,c=linecolor,linewidth=linewidth)
 plt.xlabel("Energy [MeV]")
 plt.ylabel("dQ/dE [pC/MeV]")
 
