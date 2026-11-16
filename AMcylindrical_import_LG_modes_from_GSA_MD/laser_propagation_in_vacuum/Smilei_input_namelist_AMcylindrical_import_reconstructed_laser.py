@@ -130,6 +130,10 @@ total_energy_LG_reconstruction = 0.
 # use Parseval theorem to compute the total energy of the reconstruction
 for p in range(0, dict_mode_basis["Max_LG_index_p"] + 1):
     for l in range(-dict_mode_basis["Max_LG_index_l"], dict_mode_basis["Max_LG_index_l"] + 1):
+        if l>=0:
+            l_index = l
+        else:
+            l_index = dict_mode_basis["Max_LG_index_l"]+np.abs(l)
         total_energy_LG_reconstruction += np.abs( Coeffs_LG_pl[p, l_index] )**2
 
 laser_energy_focal_plane = 2.2 # J
@@ -139,7 +143,7 @@ laser_energy_focal_plane = 2.2 # J
 integral_time_seconds    = np.sqrt(2*np.pi)*(laser_fwhm_s/np.sqrt(2))/(2*np.sqrt(2*np.log(2)))
 
 # scaling factor to have the desired energy
-K_square                 = laser_energy_focal_plane/0.5/epsilon_0/total_energy_LG_reconstruction/(c*integral_time_seconds)
+K_square                 = laser_energy_focal_plane/0.5/eps0/total_energy_LG_reconstruction/(c*integral_time_seconds)
 
 Coeffs_LG_pl_rescaled    = Coeffs_LG_pl*np.sqrt(K_square)
 
