@@ -134,19 +134,8 @@ Coeffs_LG_pl_rescaled    = Coeffs_LG_pl*np.sqrt(K_square)
 
 # The laser pulse will be injected from the border x = 0.
 
-# Define the position of xmin=0 (in simulation coordinates) relative to the focal plane
-# of the LG modes reconstructed by GSA-MD.
-# If negative, the focal plane will be at x>0 (downstream from xmin).
-# Decreasing this value shifts the focal plane further on the right.
-xmin_minus_LG_focus       = -2100.e-6 + center_laser / meter                    # meters
-# Focal plane position of the LG modes used in GSA-MD (relative to GSA-MD coordinate origin)
-x_focus_LG_modes_GSA_MD   = dict_mode_basis["x_focus"]                          # meters
-# Position of xmin=0 in simulation coordinates relative to the GSA-MD axis origin.
-# In other words, the GSA-MD coordinate origin is at x = -x_min_GSA_MD_axis.
-# The focal plane of the LG modes in simulation coordinates is then at x = -(x_min_GSA_MD_axis - x_focus_LG_modes_GSA_MD).
-x_min_GSA_MD_axis         = xmin_minus_LG_focus + x_focus_LG_modes_GSA_MD # meters
-# The position of the LG focus is at (in simulation coordinates, normalized units):
-x_focus_LG_modes          = -(x_min_GSA_MD_axis - x_focus_LG_modes_GSA_MD)*meter
+# Focal plane of the LG modes, in simulation coordinates (normalized units)
+x_focus_LG_modes          = 2100.*um
 
 ##### Define the laser from its LG mode decomposition
 

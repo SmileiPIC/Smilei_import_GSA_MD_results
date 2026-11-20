@@ -21,7 +21,7 @@ S                        = happi.Open()
 
 ## Physical constants from namelist
 lambda_0                 = S.namelist.lambda_0      # laser wavelength, m
-x_focus_meter            = S.namelist.x_focus_LG_modes_GSA_MD 
+x_focus_meter            = S.namelist.dict_mode_basis["x_focus"]
 c_normalized             = S.namelist.c_normalized  # speed of light in vacuum in normalized units
 um                       = S.namelist.um            # 1 micron in normalized units
 meter                    = S.namelist.meter         # 1 meter in normalized units

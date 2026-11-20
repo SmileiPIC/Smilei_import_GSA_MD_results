@@ -125,11 +125,11 @@ one_ov_e2_width_y[one_ov_e2_width_y==0] = np.nan
 one_ov_e2_width_z                       = np.asarray(one_ov_e2_width_z)
 one_ov_e2_width_z[one_ov_e2_width_z==0] = np.nan
 
-# x-x_focus in the PIC simulation
+# x-x_focus in the PIC simulation (the laser peak is at x = t-center_laser)
 x_minus_x_focus_PIC                     = (np.asarray(timesteps)
-                                           * S.namelist.dt*S.namelist.c_over_omega0
-                                           +S.namelist.xmin_minus_LG_focus
-                                           -S.namelist.center_laser/S.namelist.meter) 
+                                           * S.namelist.dt
+                                           -S.namelist.center_laser
+                                           -S.namelist.x_focus_LG_modes)/S.namelist.meter
 
 
 ###  If you don't want to compute again the 1/e^2 widths next time, save then here in .npy ...
